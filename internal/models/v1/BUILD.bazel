@@ -1,0 +1,11 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "models",
+    srcs = [
+        "article.go",
+        "user.go",
+    ],
+    importpath = "github.com/jrbeverly/cobra-cmd-with-docs/internal/models/v1",
+    visibility = ["//:__subpackages__"],
+)

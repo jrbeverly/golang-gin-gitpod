@@ -1,0 +1,2 @@
+build --stamp --workspace_status_command=./bazel/scripts/stamp.bash
+test --test_output=all

@@ -1,0 +1,22 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library", "go_test")
+
+go_library(
+    name = "data",
+    srcs = [
+        "article.go",
+        "static.go",
+        "user.go",
+    ],
+    importpath = "github.com/jrbeverly/cobra-cmd-with-docs/internal/data",
+    visibility = ["//:__subpackages__"],
+    deps = ["//internal/models/v1:models"],
+)
+
+go_test(
+    name = "data_test",
+    srcs = [
+        "article_test.go",
+        "user_test.go",
+    ],
+    embed = [":data"],
+)

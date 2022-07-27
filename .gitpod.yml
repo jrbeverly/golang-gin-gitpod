@@ -1,0 +1,22 @@
+# ports:
+#   - port: 8080
+#     onOpen: open-preview
+
+checkoutLocation: "go/src/github.com/jrbeverly/golang-gin-consignment"
+workspaceLocation: "go/src/github.com/jrbeverly/golang-gin-consignment"
+
+image:
+  file: .gitpod/Dockerfile
+
+# tasks:
+#   - init: >
+#       go build -o app
+#     command: >
+#       ./app
+ 
+vscode:
+  extensions:
+    - golang.go
+    - ms-azuretools.vscode-docker
+    - bazelbuild.vscode-bazel
+    - hashicorp.terraform

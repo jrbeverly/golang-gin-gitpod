@@ -1,0 +1,8 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "cobrago",
+    srcs = ["storage.go"],
+    importpath = "github.com/jrbeverly/cobra-cmd-with-docs/pkg/cobrago",
+    visibility = ["//visibility:public"],
+)

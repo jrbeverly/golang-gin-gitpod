@@ -1,0 +1,17 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "backend",
+    srcs = [
+        "article.go",
+        "auth.go",
+        "routes.go",
+        "user.go",
+    ],
+    importpath = "github.com/jrbeverly/cobra-cmd-with-docs/internal/backend",
+    visibility = ["//:__subpackages__"],
+    deps = [
+        "//internal/data",
+        "@com_github_gin_gonic_gin//:gin",
+    ],
+)
